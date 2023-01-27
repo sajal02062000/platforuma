@@ -2,6 +2,19 @@
 <html>
 
 <head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
   <base href="/">
 
   <meta charset="UTF-8">
@@ -36,12 +49,12 @@
       border: 16px solid #f3f3f3;
       border-radius: 50%;
       border: 15px solid;
-      border-top: 16px solid #367FA9;
-      border-right: 16px solid white;
-      border-bottom: 16px solid #367FA9;
-      border-left: 16px solid white;
-      width: 120px;
-      height: 120px;
+      border-top: 5px solid blueviolet;
+      border-right: 5px solid white;
+      border-bottom: 5px solid blueviolet;
+      border-left: 5px solid white;
+      width: 50px;
+      height: 50px;
       -webkit-animation: spin 2s linear infinite;
       animation: spin 2s linear infinite;
     }
@@ -69,9 +82,52 @@
 </head>
 
 <body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+
+  <script>
+    // TODO: Replace the following with your app's Firebase project configuration.
+    // See: https://support.google.com/firebase/answer/7015592
+    var firebaseConfig = {
+      apiKey: "AIzaSyBQEOzp_Bj2zAsDWyNQrukEt8VWaqCt89g",
+      authDomain: "platforumawebsite-c9ea8.firebaseapp.com",
+      projectId: "platforumawebsite-c9ea8",
+      storageBucket: "platforumawebsite-c9ea8.appspot.com",
+      messagingSenderId: "1082739840425",
+      appId: "1:1082739840425:web:0eb52e4d93738f2d7d20b8",
+      measurementId: "G-VLVQLB5GVG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <!--- <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBQEOzp_Bj2zAsDWyNQrukEt8VWaqCt89g",
+      authDomain: "platforumawebsite-c9ea8.firebaseapp.com",
+      projectId: "platforumawebsite-c9ea8",
+      storageBucket: "platforumawebsite-c9ea8.appspot.com",
+      messagingSenderId: "1082739840425",
+      appId: "1:1082739840425:web:0eb52e4d93738f2d7d20b8",
+      measurementId: "G-VLVQLB5GVG"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script> --->
   <div class="loading">
     <div class="loader"></div>
-    <img src="assets/assets/images/complete_logo.png" alt="" srcset="">
+    <img src="assets/assets/images/logo.png" alt="" srcset="">
   </div>
   <script src="main.dart.js" type="application/javascript"></script>
 
